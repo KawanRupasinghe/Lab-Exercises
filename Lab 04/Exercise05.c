@@ -2,46 +2,44 @@
 
 int main(){
 
-int weekday, night, weekend;
-float totalBill, preTaxBill, averageCost, taxes;
-float flatRate = 39.99;
-float taxRate = 5.25;
-float addCost = 0.40;
+float n;
+int type;
 
-printf("Enter weekday minutes: ");
-scanf("%d", &weekday);
-printf("Enter night minutes: ");
-scanf("%d", &night);
-printf("Enter weekend minutes: ");
-scanf("%d", &weekend);
+printf("Enter Richter Scale Value: ");
+scanf("%f", &n);
 
-//Usage Display
-
-printf("\n");
-printf("MONTHLY USAGE\n");
-printf("Weekday Minutes: %d \n", weekday);
-printf("Night Minutes: %d \n", night);
-printf("Weekend Minutes: %d \n", weekend);
-printf("\n");
-
-//Bill Calculation
-
-if (weekday <= 600)
-    preTaxBill = 39.99 * weekday;
+if (n > 0 && n < 5.0)
+        type = 1;
+else if (n >= 5.0 && n < 5.5)
+        type = 2;
+else if (n >= 5.5 && n < 6.5)
+        type = 3;
+else if (n >= 6.5 && n < 7.5)
+        type = 4;
+else if (n > 7.5)
+        type = 5;
 else
-    preTaxBill = (39.99 * 600) + ((weekday - 600) * addCost);
+        type = 6;
 
-averageCost = preTaxBill / weekday;
-taxes = preTaxBill * (5.25 / 100);
-totalBill = preTaxBill + taxes;
+switch(type){
 
-//Bill Display
-
-printf("MONTHLY BILL\n");
-printf("Pre-Tax Bill: %.2f \n", preTaxBill);
-printf("Average Minute Cost: %.2f \n", averageCost);
-printf("Taxes: %.2f \n", taxes);
-printf("Total Bill: %.2f", totalBill);
-
+case 1:
+        printf("Little or no damage");
+        break;
+case 2:
+        printf("Some damage");
+        break;
+case 3:
+        printf("Serious damage: walls may crack or fall");
+        break;
+case 4:
+        printf("Disaster: houses and buildings may collapse");
+        break;
+case 5:
+        printf("Catastrophe: most buildings destroyed");
+        break;
+default:
+        printf("Incorrect value");
+}
 return 0;
 }
