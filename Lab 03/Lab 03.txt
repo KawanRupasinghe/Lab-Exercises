@@ -1,0 +1,63 @@
+IT23283312 – Lab 03
+
+Question 1
+
+a) c == a + b || !flag
+ 14 == 6 + 9 || ! 1
+ 14 == 15 || 0
+
+False
+
+b) a != 7 && flag || c >= 6
+ 6 != 7 && 1 || 14>= 6
+
+True
+
+c) !(b <= 12) && a % 2 == 0
+ !(9 <= 12) && 6 % 2 == 0
+ !(9 <= 12) && 0 == 0
+
+False
+
+d) !(a > 5 || c < a + b)
+ !(6 > 5 || 14 < 6 + 9)
+ !(6 > 5 || 14 < 15)
+
+False
+
+
+Question 2
+
+a) 18 <= age <= 21
+ age >= 18 && age <= 21
+
+b) 0.1 < water < 1.5
+ water > 0.1 && water < 1.5
+
+c) year % 4 = 0
+ year % 4 == 0
+
+d) !(speed > 55)
+
+e) x < y < z
+ x < y && y < z
+
+f) w = 6 || !(w > 3)
+
+
+Question 3
+
+F – Fingerprint
+R – Retina Scan
+A – Access Card
+
+(F && R) || (F && A) || (R && A)
+
+
+Question 4
+
+Section 1 – S1
+Section 2 – S2
+Section 3 – S3
+
+(S1 >= 70) && (S2 >= 70) && (S3 >= 70) && { [(S1 + S2 + S3) / 3] >= 75 }
